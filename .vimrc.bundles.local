@@ -1,0 +1,5 @@
+let g:spf13_use_old_powerline=1
+let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'javascript', 'html']
+Bundle 'juvenn/mustache.vim'
+Bundle 'nono/vim-handlebars'
+Bundle 'jamescarr/snipmate-nodejs'

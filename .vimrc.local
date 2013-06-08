@@ -1,0 +1,44 @@
+if has("gui_win32")
+    set guifont=Consolas
+    set encoding=utf-8
+    setglobal fileencoding=utf-8
+    set fileencodings=ucs-bom,utf-8,latin1
+    set fileformat=unix
+endif
+
+if has('statusline')
+    set statusline=%<%f\    " Filename
+    set statusline+=%w%h%m%r " Options
+    set statusline+=%{fugitive#statusline()} "  Git Hotness
+    set statusline+=\ [%{&ff}/%Y]            " filetype
+    set statusline+=\ [%.30F]          " current dir
+    set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+endif
+
+set nospell
+colors xoria256
+
+nmap <silent> <leader>ev :e $MYVIMRC<cr>
+nmap <silent> <leader>sv :so $MYVIMRC<cr>
+
+nmap <silent> <leader>n :set invhls<cr>:set hls?<cr>
+nmap <silent> <leader>m :b#<cr>
+
+set noeb vb t_vb=
+
+set diffopt+=iwhite
+"set noexpandtab
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set guioptions -=m
+
+"let g:powerline_config_overrides={"common": {"dividers": {"left": {"hard": " ", "soft": "| "}, "right": {"hard": " ", "soft": " |"}}}}
+
+let g:syntastic_javascript_checkers =['jslint']
+let g:syntastic_javascript_jslint_conf = ""
+
+map ; :
