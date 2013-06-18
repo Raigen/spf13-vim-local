@@ -3,3 +3,4 @@ let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'ja
 Bundle 'juvenn/mustache.vim'
 Bundle 'nono/vim-handlebars'
 Bundle 'jamescarr/snipmate-nodejs'
+Bundle 'mattn/zencoding-vim'
