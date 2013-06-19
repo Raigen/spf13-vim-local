@@ -4,6 +4,7 @@ if has("gui_win32")
     setglobal fileencoding=utf-8
     set fileencodings=ucs-bom,utf-8,latin1
     set fileformat=unix
+    set guioptions -=m
 endif
 
 if has('statusline')
@@ -33,8 +34,6 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-
-set guioptions -=m
 
 "let g:powerline_config_overrides={"common": {"dividers": {"left": {"hard": " ", "soft": "| "}, "right": {"hard": " ", "soft": " |"}}}}
 
