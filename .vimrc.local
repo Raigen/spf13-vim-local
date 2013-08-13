@@ -4,6 +4,9 @@ if has("gui_win32")
     setglobal fileencoding=utf-8
     set fileencodings=ucs-bom,utf-8,latin1
     set fileformat=unix
+endif
+
+if has('gui_running')
     set guioptions -=m
 endif
 
@@ -14,6 +17,12 @@ if has('statusline')
     set statusline+=\ [%{&ff}/%Y]            " filetype
     set statusline+=\ [%.30F]          " current dir
     set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+
+    unlet g:airline_powerline_fonts
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep=''
+    let g:airline_right_sep=''
+    let g:airline_right_alt_sep=''
 endif
 
 set nospell
