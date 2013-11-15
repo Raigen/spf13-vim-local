@@ -33,6 +33,9 @@ nmap <silent> <leader>sv :so $MYVIMRC<cr>
 nmap <silent> <leader>n :set invhls<cr>:set hls?<cr>
 nmap <silent> <leader>m :b#<cr>
 
+map <F7> mzgg=G`z<CR>
+map <F1> <Esc>
+
 set noeb vb t_vb=
 
 set diffopt+=iwhite
@@ -47,9 +50,11 @@ set guioptions -=m
 
 let g:vim_json_syntax_conceal=0
 
-let g:syntastic_javascript_checkers =['jslint']
+let g:syntastic_javascript_checkers =['jshint']
 let g:syntastic_javascript_jslint_conf = ""
 let g:syntastic_php_checkers =['php', 'phpcs']
 let g:syntastic_php_phpcs_args="--standard=Zend --report=csv"
+
+let g:ctrlp_cmd = 'CtrlPMRU'
 
 map ; :

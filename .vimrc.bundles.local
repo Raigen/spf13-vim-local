@@ -7,3 +7,5 @@ Bundle 'editorconfig/editorconfig-vim'
 "Bundle 'ludovicPelle/vim-xdebug'
 Bundle 'martintreurnicht/vim-gradle'
 Bundle 'matze/vim-move'
+
+Bundle 'Raigen/snipmate-snippets'
