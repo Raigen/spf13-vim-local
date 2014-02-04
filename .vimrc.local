@@ -24,6 +24,10 @@ if has('statusline')
     let g:airline_right_alt_sep=''
 endif
 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
 set nospell
 colors xoria256
 
@@ -33,8 +37,15 @@ nmap <silent> <leader>sv :so $MYVIMRC<cr>
 nmap <silent> <leader>n :set invhls<cr>:set hls?<cr>
 nmap <silent> <leader>m :b#<cr>
 
-map <F7> mzgg=G`z<CR>
-map <F1> <Esc>
+nmap <F7> mzgg=G`z<CR>
+imap <F1> <Esc>
+vmap <F1> <Esc>
+
+" mapping for moving through the buffers
+nnoremap <C-J> :bnext<cr>
+nnoremap <C-K> :bprevious<cr>
+
+nnoremap <F5> :UndotreeToggle<cr>
 
 set noeb vb t_vb=
 
@@ -51,11 +62,15 @@ set guioptions -=m
 let g:vim_json_syntax_conceal=0
 
 let g:syntastic_javascript_checkers =['jshint']
-let g:syntastic_javascript_jslint_conf = ""
 let g:syntastic_coffee_checkers = ['coffee']
-let g:syntastic_php_checkers =['php', 'phpcs']
-let g:syntastic_php_phpcs_args="--standard=Zend --report=csv"
+"let g:syntastic_php_checkers =['php', 'phpcs']
+"let g:syntastic_php_phpcs_args="--standard=Zend --report=csv"
+
+let g:signify_vcs_list = ['git']
 
 let g:ctrlp_cmd = 'CtrlPMRU'
 
 map ; :
+
+autocmd FileType coffee setl colorcolumn=120
+autocmd FileType coffee setl foldmethod=indent nofoldenable
